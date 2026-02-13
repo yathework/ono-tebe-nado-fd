@@ -79,7 +79,16 @@
   inset: 0;
   background-color: var(--black);
   opacity: 0.6;
+}
+
+/* ===== для cover оверлей ===== */
+.cover .overlay {
   z-index: -1;
+}
+
+/* ===== для карточек лотов ===== */
+.card .overlay {
+  z-index: 1;
 }
 
 .cover__title {
@@ -99,7 +108,7 @@
 .aligned-text_center {
   text-align: center;
   margin: 20px 0;
-  padding-left: 28px;
+  padding-left: 30px;
 }
 
 .aligned-text_right {
@@ -192,14 +201,18 @@
   font-size: 22px;
   text-transform: uppercase;
   text-decoration: underline;
-  margin: 0;  
-  text-underline-offset: -2.5px; /* корректировка ссылки */
+  margin: 0;
+  text-underline-offset: -2px; /* корректировка ссылки */
+  position: relative;
+  z-index: 2;
 }
 
 .card__text {
   font-size: 20px;
   line-height: 1.2;
   margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
 .lots__look-more-link {
@@ -243,14 +256,14 @@
   margin: 0 0 100px 0;
 }
 
-/* ===== текст в секции об аукционе ===== */
-.about__text {
+/* ===== об аукционе (два параграфа) ===== */
+.about__text p {
   font-size: 20px;
   line-height: 24px;
   margin: 0 0 24px 0;
 }
 
-.about__text--reset {
+.about__text p:last-child {
   margin-bottom: 0;
 }
 
